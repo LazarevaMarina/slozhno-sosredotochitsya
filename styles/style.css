@@ -10,8 +10,8 @@
 
 .header {
   display: grid;
-  grid-template-rows: 26px 0.8fr 1fr 1fr 26px;
-  margin-bottom: 40px;
+  grid-template-rows: 25px 1fr 1fr 1fr 25px;
+  margin-bottom: 50px;
 }
 
 .header__theme-menu-button_active {
@@ -49,7 +49,7 @@
   cursor: pointer;
   height: 26px;
   padding: 1.5px 13px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .header__theme-menu-button:hover {
@@ -66,7 +66,7 @@
 
 .header__theme-menu {
   justify-self: self-end;
-  align-self: center;
+  margin-top: 30px;
 }
 
 .header__title {
@@ -74,10 +74,12 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--color-header-title);
   line-height: 95px;
+  align-self: self-end;
+  margin-top: 8px;
 }
 
 .header_content {
-  margin-block: 55px 33px;
+  margin-block: 55px 0px;
   justify-self: end;
 }
 
@@ -93,7 +95,7 @@
 }
 
 .content_indent {
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 .main_card {
@@ -107,7 +109,7 @@
 .card_title {
   color: var(--accent-color);
   font-size: inherit;
-  max-width: 236px;
+  /*max-width: 236px;*/
 }
 
 .subtitle {
