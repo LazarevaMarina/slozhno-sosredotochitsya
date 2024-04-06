@@ -3,7 +3,7 @@
   background-color: var(--main-background-color);
   font-size: 18px;
   padding: 10px;
-  background-image: url('../images/cover-image-dark.png');
+  background-image: url("../images/cover-image-dark.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -35,7 +35,7 @@
   align-self: center;
   border-radius: 9px;
   position: absolute;
-  margin: 5px 0  0 6px;
+  margin: 5px 0 0 6px;
   box-shadow: 0px 0px 10px var(--accent-color);
 }
 
@@ -53,7 +53,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-bottom:  1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button:focus {
@@ -77,7 +77,7 @@
 }
 
 .header_content {
-  margin-block: 55px 33px ;
+  margin-block: 55px 33px;
   justify-self: end;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .content_link:focus-visible {
-   outline: var(--content-color) solid 1px;
+  outline: var(--content-color) solid 1px;
 }
 
 .card_image {
@@ -186,7 +186,7 @@
   .header_content {
     inline-size: 50%;
     margin-top: 25px;
-    padding-top: 25px ;
+    padding-top: 25px;
     font-size: inherit;
   }
 
@@ -198,7 +198,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, max-content);
     grid-template-areas:
-      "heading heading heading" 
+      "heading heading heading"
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
@@ -210,7 +210,7 @@
 
   .books {
     grid-area: books;
-  }  
+  }
   .sunset {
     grid-area: sunset;
   }
@@ -222,7 +222,7 @@
   .tape {
     grid-area: tape;
   }
-    
+
   .street {
     grid-area: street;
   }
@@ -238,7 +238,7 @@
     grid-template-columns: 1fr 30px;
     grid-template-rows: 1fr 2fr 1fr 30px;
     grid-template-areas:
-      "menu decor_top" 
+      "menu decor_top"
       "header_title header_title"
       "header_content header_content"
       "decor_bottom decor_bottom";
@@ -263,7 +263,7 @@
     grid-area: header_content;
   }
 
-  .decor_bottom{
+  .decor_bottom {
     grid-area: decor_bottom;
   }
 
@@ -278,6 +278,6 @@
   }
 
   .card_title {
-    max-inline-size : 315px;
+    max-inline-size: 315px;
   }
 }
