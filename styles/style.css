@@ -10,7 +10,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: 26px 1fr 1fr 1fr 26px;
+  grid-template-rows: 26px 0.8fr 1fr 1fr 26px;
   margin-bottom: 40px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .header_content {
-  margin-block: 35px 33px;
+  margin-block: 55px 33px;
   justify-self: end;
 }
 
