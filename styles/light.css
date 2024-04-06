@@ -1,12 +1,53 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+.theme_light {
+  --main-background-color: rgb(243, 233, 237);
+  --content-color: #353430;
+  --accent-color: #ff8dcb;
+  --color-header-title: #ffc2e6;
+  --font-title: #353430;
+  --color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme_auto {
+    --main-background-color: rgb(243, 233, 237);
+    --content-color: #353430;
+    --accent-color: #ff8dcb;
+    --color-header-title: #ffc2e6;
+    --font-title: #353430;
+    --color-scheme: light;
+    background-image: url('../images/cover-image-light.png');
+  }
+  .theme_auto .header_decor {
+      font-size: 0;
+    }
+    
+  .theme_auto .header_decor::after {
+      inline-size: 0;
+      block-size: 0;
+    }
+} 
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  background-image: url('../images/cover-image-light.png');
+}
+
+.theme_light  .header__theme-menu-button {
+  color: var(--font-title);
+}
+
+.theme_light .header__theme-menu-button_active {
+  outline: var(--font-title) solid 1px;
+}
+
+.theme_light .card_title {
+  color: #353430;
+}
+
+.theme_light .header_decor {
+  font-size: 0;
+}
+
+.theme_light .header_decor::after {
+  inline-size: 0;
+  block-size: 0;
 }

@@ -10,3 +10,15 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --accent-color: #ff0070;
+    --main-font: IBM Plex mono;
+    --color-header-title: #db00ff;
+    --main-background-color: #000;
+    --content-color: #f1b2ce;
+    --font-title: #000028;
+    --color-scheme: dark;
+  }
+}

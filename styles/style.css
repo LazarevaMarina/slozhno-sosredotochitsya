@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   font-family: var(--main-font, Sans-serif);
   background-color: var(--main-background-color);
@@ -12,28 +10,75 @@
 
 .header {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 30px 1fr 1fr 1fr 30px;
+  margin-bottom: 40px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header_decor {
+  color: var(--accent-color);
+  position: absolute;
+  text-transform: uppercase;
+  justify-self: end;
+  margin: 2px 25px 0 0;
+}
+
+.header_decor::after {
+  content: "\00A0";
+  display: inline-block;
+  inline-size: 12px;
+  block-size: 12px;
+  background-color: var(--accent-color);
+  align-self: center;
+  border-radius: 9px;
+  position: absolute;
+  margin: 5px 0  0 6px;
+  box-shadow: 0px 0px 10px var(--accent-color);
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  height: 26px;
+  padding: 1.5px 13px;
+  margin: 5px;
+}
+
+.header__theme-menu-button:hover {
+  border-bottom:  1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: solid 1px rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu {
+  justify-self: self-end;
+  align-self: center;
 }
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--color-header-title);
-  margin: 0 0 55px;
   line-height: 95px;
 }
 
-@media (min-width: 768px) {
-  .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding: 0;
-  }
-
-  .header_content {
-    inline-size: 50%;
-    margin: 0 0 0 auto;
-    font-size: inherit;
-  }
+.header_content {
+  margin-block: 55px 33px ;
+  justify-self: end;
 }
 
 .accent-title {
@@ -42,43 +87,31 @@
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #000028;
+  color: var(--font-title);
   font-size: inherit;
-  margin: 20px 0 10px 0;
+  margin-bottom: 10px;
 }
 
-.title-decor:first-child {
-  color: aqua;
-  margin-top: 0;
+.content_indent {
+  margin-top: 20px;
 }
-
 
 .main_card {
   display: grid;
   gap: 20px;
-  color: #f1b2ce;
+  color: var(--content-color);
   margin-bottom: 40px;
   line-height: 23px;
 }
 
-@media (width>=768px) {
-  .main_card:nth-child(odd) {
-    grid-template-columns: minmax(236px, 30%) auto;
-  }
-}
-
-@media (width>=1024px) {
-  .card_1024:nth-child(2) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
-}
-
 .card_title {
-  flex-basis: 236px;
-  color: #ff0070;
+  color: var(--accent-color);
   font-size: inherit;
+  max-width: 236px;
+}
+
+.subtitle {
+  font-weight: 400;
 }
 
 .content_link {
@@ -88,11 +121,21 @@
 }
 
 .content_link:hover {
-  border-bottom: #f1b2ce solid 1px;
+  border-bottom: var(--content-color) solid 1px;
 }
 
 .content_link:focus {
-   outline: #f1b2ce solid 1px;
+  outline: none;
+}
+
+.content_link:focus-visible {
+   outline: var(--content-color) solid 1px;
+}
+
+.card_image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .card_images {
@@ -100,37 +143,141 @@
   gap: 10px;
 }
 
-@media (min-width: 768px) {
+.footer {
+  display: grid;
+  grid-template-rows: 3fr 1fr 3fr;
+}
+
+.footer_title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--color-header-title);
+  line-height: 95px;
+  justify-self: center;
+}
+
+.haeder_or_footer_angle {
+  content: "\00A0";
+  display: inline-block;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+}
+
+.align_element_top {
+  justify-self: self-end;
+  border-right: var(--accent-color) solid 1px;
+  border-top: var(--accent-color) solid 1px;
+}
+
+.align_element_bottom {
+  justify-self: self-start;
+  align-self: self-end;
+  border-left: var(--accent-color) solid 1px;
+  border-bottom: var(--accent-color) solid 1px;
+}
+
+@media (min-width: 760px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding: 0;
+  }
+
+  .header_content {
+    inline-size: 50%;
+    margin-top: 25px;
+    padding-top: 25px ;
+    font-size: inherit;
+  }
+
+  .main_card:nth-child(odd) {
+    grid-template-columns: minmax(236px, 30%) auto;
+  }
+
   .card_images {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, max-content);
-    grid-template-areas: 
+    grid-template-areas:
+      "heading heading heading" 
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-    
   }
+
+  .heading {
+    grid-area: heading;
+  }
+
   .books {
     grid-area: books;
-    inline-size: 100%;
   }  
   .sunset {
     grid-area: sunset;
-    inline-size: 100%;
   }
 
   .ice-cream {
     grid-area: ice-cream;
-    inline-size: 100%;
   }
 
   .tape {
     grid-area: tape;
-    inline-size: 100%;
   }
     
   .street {
     grid-area: street;
-    inline-size: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 1fr 2fr 1fr 30px;
+    grid-template-areas:
+      "menu decor_top" 
+      "header_title header_title"
+      "header_content header_content"
+      "decor_bottom decor_bottom";
+  }
+
+  .header__theme-menu {
+    grid-area: menu;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .decor_top {
+    grid-area: decor_top;
+  }
+
+  .header__title {
+    grid-area: header_title;
+    align-self: center;
+  }
+
+  .header_content {
+    grid-area: header_content;
+  }
+
+  .decor_bottom{
+    grid-area: decor_bottom;
+  }
+
+  .card_1024 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .content_indent {
+    margin-top: 0;
+  }
+
+  .card_title {
+    max-inline-size : 315px;
   }
 }
