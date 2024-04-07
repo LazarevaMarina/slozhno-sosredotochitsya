@@ -2,7 +2,7 @@
   font-family: var(--main-font, Sans-serif);
   background-color: var(--main-background-color);
   font-size: 18px;
-  padding: 10px;
+  /*padding: 10px;*/
   background-image: url("../images/cover-image-dark.png");
   background-size: cover;
   background-attachment: fixed;
