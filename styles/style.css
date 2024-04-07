@@ -91,7 +91,7 @@
   background-color: var(--accent-color);
   color: var(--font-title);
   font-size: inherit;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .content_indent {
@@ -143,6 +143,10 @@
 .card_images {
   display: grid;
   gap: 10px;
+}
+
+.heading {
+  margin: 0;
 }
 
 .footer {
