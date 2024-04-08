@@ -66,7 +66,7 @@
 
 .header__theme-menu {
   justify-self: self-end;
-  margin-top: 26px;
+  margin-top: 28px;
 }
 
 .header__title {
@@ -74,11 +74,12 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--color-header-title);
   line-height: 95px;
-  margin-top: 5px;
+  align-self: center;
+  
 }
 
 .header_content {
-  margin-block: 55px 0px;
+  margin-block-start: 34px;
   justify-self: end;
 }
 
@@ -145,7 +146,8 @@
 .footer {
   display: grid;
   grid-template-rows: 3fr 1fr 3fr;
-  max-height: 668px;
+  max-block-size: 668px;
+  margin-block-start: 30px;
   padding: 10px;
 }
 
@@ -178,17 +180,52 @@
   border-bottom: var(--accent-color) solid 1px;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
+  .header {
+    min-block-size: 1024px;
+    padding: 20px 20px 20px 0;
+    margin-block-end: 60px;
+  }
+
+  .header__theme-menu {
+    padding-block-start: 38px;
+    align-self: center;
+  }
+  
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding: 0;
   }
 
   .header_content {
-    inline-size: 50%;
-    margin-top: 25px;
-    padding-top: 25px;
+    inline-size: 48.5%;
+    margin-block-start: 36px;
     font-size: inherit;
+  }
+
+  .main_card {
+    padding: 0 20px 0 20px;
+    margin-block-end: 80px;
+    gap: 20px;
+  }
+
+  .main_card:last-child {
+    margin-block-end: 60px;
+  }
+
+  .indent {
+    margin-block-start: 0;
+  }
+
+  .card_title {
+    max-width: 236px;
+  }
+
+  .align_element_bottom {
+    margin-inline-start: 20px;
+  }
+
+  .footer .align_element_bottom {
+    margin-inline-start: 0;
   }
 
   .main_card:nth-child(odd) {
@@ -226,6 +263,15 @@
 
   .street {
     grid-area: street;
+  }
+
+  .footer {
+    min-height: 1024px;
+    padding: 20px;
+  }
+
+  .footer_title {
+    margin-block-start: 28px;
   }
 }
 

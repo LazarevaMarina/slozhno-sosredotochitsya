@@ -1,4 +1,4 @@
-:root.theme_light {
+:root .theme_light {
   --main-background-color: rgb(243, 233, 237);
   --content-color: #353430;
   --accent-color: #ff8dcb;
@@ -25,7 +25,7 @@
       inline-size: 0;
       block-size: 0;
     }
-} 
+  }
 
 .page.theme_light {
   background-image: url('../images/cover-image-light.png');
@@ -51,3 +51,4 @@
   inline-size: 0;
   block-size: 0;
 }
+
