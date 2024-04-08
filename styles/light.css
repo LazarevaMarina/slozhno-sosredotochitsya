@@ -1,4 +1,4 @@
-.theme_light {
+:root.theme_light {
   --main-background-color: rgb(243, 233, 237);
   --content-color: #353430;
   --accent-color: #ff8dcb;

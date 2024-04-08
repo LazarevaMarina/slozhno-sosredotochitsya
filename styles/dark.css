@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
-  .page.theme_dark {
+  :root.theme_dark {
     --accent-color: #ff0070;
     --main-font: IBM Plex mono;
     --color-header-title: #db00ff;
