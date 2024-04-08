@@ -289,6 +289,8 @@
       "header_title header_title"
       "header_content header_content"
       "decor_bottom decor_bottom";
+
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -326,5 +328,9 @@
 
   .card_title {
     max-inline-size: 315px;
+  }
+
+  .footer {
+    min-height: 768px;
   }
 }
