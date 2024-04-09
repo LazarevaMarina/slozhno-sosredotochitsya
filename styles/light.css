@@ -17,23 +17,23 @@
     --color-header-title: #ffc2e6;
     --font-title: #353430;
     --color-scheme: light;
-    background-image: url('../images/cover-image-light.png');
+    background-image: url("../images/cover-image-light.png");
   }
   .theme_auto .header_decor {
-      font-size: 0;
-    }
-    
-  .theme_auto .header_decor::after {
-      inline-size: 0;
-      block-size: 0;
-    }
+    font-size: 0;
   }
 
-.page.theme_light {
-  background-image: url('../images/cover-image-light.png');
+  .theme_auto .header_decor::after {
+    inline-size: 0;
+    block-size: 0;
+  }
 }
 
-.theme_light  .header__theme-menu-button {
+.page.theme_light {
+  background-image: url("../images/cover-image-light.png");
+}
+
+.theme_light .header__theme-menu-button {
   color: var(--font-title);
 }
 
@@ -53,4 +53,3 @@
   inline-size: 0;
   block-size: 0;
 }
-
