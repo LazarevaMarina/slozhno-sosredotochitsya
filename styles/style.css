@@ -276,9 +276,7 @@
 }
 
 @media (min-width: 1024px) {
-  .page {
-    font-size: 18px;
-  }
+
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
@@ -348,7 +346,12 @@
     margin-top: 0;
   }
 
-  .footer {
+  .footer{
     min-height: 768px;
+  }
+
+  .footer_title {
+    font-size: 157px;
+    margin-block-start: 2px;
   }
 }
