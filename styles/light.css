@@ -20,8 +20,8 @@
     background-image: url("../images/cover-image-light.png");
   }
 
-  .header__theme-menu-button_active {
-    outline: 1px solid #353430;
+  .theme_auto .header__theme-menu-button_active {
+    outline: 1px solid var(--content-color);
   }
 
   .theme_auto .header_decor {
@@ -33,17 +33,17 @@
     block-size: 0;
   }
 
-  .align_element_top {
-    border-right: #353430 solid 1px;
-    border-top: #353430 solid 1px;
+  .theme_auto .align_element_top {
+    border-right: var(--content-color) solid 1px;
+    border-top: var(--content-color) solid 1px;
   }
   
-  .align_element_bottom {
-    border-left: #353430 solid 1px;
-    border-bottom: #353430 solid 1px;
+  .theme_auto .align_element_bottom {
+    border-left: var(--content-color) solid 1px;
+    border-bottom: var(--content-color) solid 1px;
   }
 
-  .header__theme-menu-button {
+  .theme_auto .header__theme-menu-button {
     color: var(--font-title);
   }
 
@@ -62,7 +62,7 @@
 }
 
 .theme_light .card_title {
-  color: #353430;
+  color: var(--content-color);
 }
 
 .theme_light .header_decor {
@@ -75,11 +75,11 @@
 }
 
 .theme_light .align_element_top {
-  border-right: #353430 solid 1px;
-  border-top: #353430 solid 1px;
+  border-right: var(--content-color) solid 1px;
+  border-top: var(--content-color) solid 1px;
 }
 
 .theme_light .align_element_bottom {
-  border-left: #353430 solid 1px;
-  border-bottom: #353430 solid 1px;
+  border-left: var(--content-color) solid 1px;
+  border-bottom: var(--content-color) solid 1px;
 }
