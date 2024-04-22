@@ -19,6 +19,11 @@
     --color-scheme: light;
     background-image: url("../images/cover-image-light.png");
   }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid #353430;
+  }
+
   .theme_auto .header_decor {
     font-size: 0;
   }
@@ -27,6 +32,21 @@
     inline-size: 0;
     block-size: 0;
   }
+
+  .align_element_top {
+    border-right: #353430 solid 1px;
+    border-top: #353430 solid 1px;
+  }
+  
+  .align_element_bottom {
+    border-left: #353430 solid 1px;
+    border-bottom: #353430 solid 1px;
+  }
+
+  .header__theme-menu-button {
+    color: var(--font-title);
+  }
+
 }
 
 .page.theme_light {
@@ -52,4 +72,14 @@
 .theme_light .header_decor::after {
   inline-size: 0;
   block-size: 0;
+}
+
+.theme_light .align_element_top {
+  border-right: #353430 solid 1px;
+  border-top: #353430 solid 1px;
+}
+
+.theme_light .align_element_bottom {
+  border-left: #353430 solid 1px;
+  border-bottom: #353430 solid 1px;
 }
