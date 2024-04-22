@@ -1,5 +1,5 @@
 .page {
-  font-family: var(--main-font, Sans-serif);
+  font-family: var(--main-font, Sans-serif), Sans-serif;
   background-color: var(--main-background-color);
   font-size: 18px;
   background-image: url("../images/cover-image-dark.png");
